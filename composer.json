@@ -1,0 +1,27 @@
+{
+    "name": "aidantwoods/preparedhtml",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aidan Woods",
+            "email": "aidantwoods@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aidantwoods\\PreparedHTML\\": [
+                "src/"
+            ]
+        }
+    },
+    "require": {
+        "php": "^7.1"
+    },
+    "suggest": {
+        "aidantwoods/secureheaders": "To enable browser security features."
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.2"
+    }
+}
