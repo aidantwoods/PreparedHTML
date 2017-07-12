@@ -1,5 +1,6 @@
 {
     "name": "aidantwoods/preparedhtml",
+    "description": "Barista-style HTML",
     "type": "library",
     "license": "MIT",
     "authors": [
