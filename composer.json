@@ -1,6 +1,6 @@
 {
     "name": "aidantwoods/preparedhtml",
-    "description": "Barista-style HTML",
+    "description": "HTML with context boundaries",
     "type": "library",
     "license": "MIT",
     "authors": [
