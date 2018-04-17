@@ -14,7 +14,7 @@ class BaseElement implements ArrayAccess
     protected $Sanitiser;
     protected $contents;
 
-    public function __construct(?string $name = null, ?string $contents = null)
+    public function __construct(string $name = null, string $contents = null)
     {
         $this->name      = $name;
         $this->contents  = $contents;
@@ -31,17 +31,17 @@ class BaseElement implements ArrayAccess
         return $this->getAttribute($offset);
     }
 
-    public function offsetSet($offset, $value) : void
+    public function offsetSet($offset, $value)
     {
         $this->setAttribute($offset, $value);
     }
 
-    public function offsetUnset($offset) : void
+    public function offsetUnset($offset)
     {
         $this->unsetAttribute($offset);
     }
 
-    public function setEncoding(?string $encoding = null) : void
+    public function setEncoding(string $encoding = null)
     {
         $this->Sanitiser->setEncoding($encoding);
     }
@@ -75,7 +75,7 @@ class BaseElement implements ArrayAccess
                     $value = isset($value) ?
                         $E->htmlAttributeValue($value) : null;
 
-                    $html .= " $name".(isset($value) ? "='$value'" : '');
+                    $html .= " $name".(isset($value) ? "=\"$value\"" : '');
                 }
             }
 

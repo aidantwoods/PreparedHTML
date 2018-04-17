@@ -7,7 +7,7 @@ class Escaper
 {
     protected $encoding;
 
-    public function __construct(?string $encoding = null)
+    public function __construct(string $encoding = null)
     {
         $this->setEncoding($encoding);
     }
@@ -22,7 +22,7 @@ class Escaper
         return static::escape($text, true);
     }
 
-    public function setEncoding(?string $encoding = null) : void
+    public function setEncoding(string $encoding = null)
     {
         $this->encoding = $encoding ?? 'UTF-8';
     }

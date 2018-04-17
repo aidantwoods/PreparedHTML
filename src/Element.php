@@ -12,7 +12,7 @@ class Element extends BaseElement implements ArrayAccess, Countable, Iterator
 {
     use ElementStorageTrait;
 
-    public function __construct(?string $name = null, ?string $contents = null)
+    public function __construct(string $name = null, string $contents = null)
     {
         parent::__construct($name);
 

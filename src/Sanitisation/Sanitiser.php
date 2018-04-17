@@ -7,7 +7,7 @@ class Sanitiser
 {
     protected $Escaper;
 
-    public function __construct(?string $encoding = null)
+    public function __construct(string $encoding = null)
     {
         $this->Escaper = new Escaper;
 
@@ -34,7 +34,7 @@ class Sanitiser
         return $this->Escaper->htmlElementValue($text);
     }
 
-    public function setEncoding(?string $encoding = null) : void
+    public function setEncoding(string $encoding = null)
     {
         $this->Escaper->setEncoding($encoding);
     }

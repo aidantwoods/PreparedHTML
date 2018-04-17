@@ -43,12 +43,12 @@ trait ElementStorageTrait
         return $this->FixedArray->key();
     }
 
-    public function next() : void
+    public function next()
     {
         $this->FixedArray->next();
     }
 
-    public function rewind() : void
+    public function rewind()
     {
         $this->FixedArray->rewind();
     }
@@ -63,7 +63,7 @@ trait ElementStorageTrait
         return $this->FixedArray->count();
     }
 
-    private function removeAndCloseGap(int $n) : void
+    private function removeAndCloseGap(int $n)
     {
         $newSize = $this->FixedArray->getSize() - 1;
 

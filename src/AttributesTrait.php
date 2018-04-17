@@ -7,7 +7,7 @@ trait AttributesTrait
 {
     private $attributes;
 
-    public function hasAttribute(?string $name) : bool
+    public function hasAttribute(string $name) : bool
     {
         return array_key_exists($name, $this->attributes);
     }
@@ -17,12 +17,12 @@ trait AttributesTrait
         return $this->attributes[$name];
     }
 
-    public function setAttribute(string $name, ?string $value) : void
+    public function setAttribute(string $name, string $value = null)
     {
         $this->attributes[$name] = $value;
     }
 
-    public function unsetAttribute(string $name) : void
+    public function unsetAttribute(string $name)
     {
         unset($this->attributes[$name]);
     }
